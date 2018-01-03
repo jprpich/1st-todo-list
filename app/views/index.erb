@@ -1,0 +1,31 @@
+<h1> Bienvenidos al sitio de mi lista de tareas.</h1>
+ 
+<form action="/" method="POST">
+	<input name="tarea" type="text" placeholder="Ingresa tu nueva tarea">
+	<input type="submit">
+</form>
+  <div class="wrapper">
+    <div class="list">
+      <h3>Por hacer:</h3>
+      <ul class="todo">
+      	<% @tareas.each do |tarea| %>
+      		<% if tarea["done"]==false %>
+ 				<li> <a href="/edit/<%=tarea["id"]%>"> <%= tarea["title"] %></a><a href="/delete/<%=tarea["id"]%>"> <span class="delete"> x </span></li>
+ 				
+ 			<% end %>   	
+      	<% end %>
+      </ul>
+    </div>
+
+    <div class="list">
+      <h3>Hecho:</h3>
+      <ul class="done">
+      	<% @tareas.each do |tarea| %>
+      		<% if tarea["done"]==true %>
+ 				<li> <a href="/edit/<%=tarea["id"]%>"> <%= tarea["title"] %> </a> <a href="/delete/<%=tarea["id"]%>"> <span class="delete"> x </span></li>
+ 				
+ 			<% end %>   	
+      	<% end %>
+      </ul>
+    </div>
+  </div>
