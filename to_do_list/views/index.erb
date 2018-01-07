@@ -1,0 +1,33 @@
+<div class="container">
+<h1>New To do task:</h1>
+
+<div class="row">
+	<div class="col-md-4">			
+		<form action="/tareas
+		" method="POST">
+			<div class="form-group">
+				<input class= "form-control" type="text" placeholder="Task" name="tarea">
+			</div>
+			<div class="form-group">
+				<input class="btn btn-primary btn-block" type="submit" value="Create">
+			</div>
+		</form>
+		  
+		  <% @tareas.each do |tarea| %>
+		  <% if tarea["done"]==true %>
+		<ul class="list-group">
+		  	<div class="done">	
+			  	<li class="list-group-item"> <%= tarea["title"] %> ok</li>
+			 </div>
+		</ul>
+		<ul class="list-group">
+			 <% else %>
+			 <div class="undone">
+			 	<li class="list-group-item"> <%= tarea["title"] %>  <a href="tareas/<%=tarea["id"]%>"><button class= "btn btn-primary">Complete</button></a></li>
+			 </div>
+		</ul>
+		  <% end %>
+		  <% end %>
+	</div>
+</div>
+</div>
