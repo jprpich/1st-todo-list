@@ -21,7 +21,7 @@
 		<% @tareas.each do |tarea| %>
 	        <% if tarea["done"]==false %>
 				<ul class="list-group">	
-					<li class="list-group-item"> <%= tarea["title"] %> <a href="tareas/edit/<%=tarea["id"]%>">   <i class="glyphicon glyphicon-remove"></i></a>     <a href="tareas/delete/<%=tarea["id"]%>"> <i class="glyphicon glyphicon-ok"></i></a></li>
+					<li class="list-group-item"> <%= tarea["title"] %> <a href="tareas/deleted/<%=tarea["id"]%>">   <i class="glyphicon glyphicon-remove"></i></a>     <a href="tareas/edit/<%=tarea["id"]%>"> <i class="glyphicon glyphicon-ok"></i></a></li>
 				</ul>
 			<% end %>
 		<% end %>
