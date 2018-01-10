@@ -4,16 +4,13 @@ body{
 	font-size: 24px;
 }
 
-
 i.glyphicon-remove {
   color: red;
-  font-size: 20px;
   float: right;
 }
 
 i.glyphicon-ok {
   color: orange;
-  font-size: 20px;
   float: right;
   margin-right: 20px;
 }
