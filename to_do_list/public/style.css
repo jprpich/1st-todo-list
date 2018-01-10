@@ -1,0 +1,18 @@
+body{
+	font-family: 'Indie Flower', cursive;
+	color: #286090;
+}
+
+
+i.glyphicon-remove {
+  color: red;
+  font-size: 20px;
+  float: right;
+}
+
+i.glyphicon-ok {
+  color: orange;
+  font-size: 20px;
+  float: right;
+  margin-right: 20px;
+}

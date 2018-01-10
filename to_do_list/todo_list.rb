@@ -15,8 +15,13 @@ post '/tareas' do
 	redirect '/tareas'
 end
 
-get '/tareas/:id' do
+get '/tareas/edit/:id' do
 	@tarea = Tarea.update(params[:id])
 	puts "tareass"
 	redirect '/tareas'
+end
+
+get '/tareas/delete/:id' do
+	  @tarea = Tarea.destroy(params[:id])
+	  redirect '/tareas'
 end
