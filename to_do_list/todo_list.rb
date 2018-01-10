@@ -4,6 +4,10 @@ require 'make_todo'
 require 'httparty'
 
 
+get '/' do
+	redirect '/tareas'
+end
+
 get '/tareas' do 	
 	@tareas = Tarea.all
 	erb :index
